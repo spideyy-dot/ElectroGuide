@@ -21,28 +21,7 @@ The solution is built with a **"Stability First"** approach:
 - **Civic Quizzes**: A gamified way to test user knowledge on voting procedures.
 - **Calendar Integration**: Allows users to add key election dates directly to their Google Calendar.
 
-## 📝 Assumptions Made
-- **Target Audience**: Indian citizens looking for simplified election information for the upcoming 2026 cycle.
-- **Demo Scope**: A curated knowledge base is sufficient to demonstrate the UX and core functionality without requiring an active Gemini API key.
-- **Deployment**: The solution is optimized for containerized environments like Google Cloud Run.
 
----
-
-## 🚀 Quick Start
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-2. **Run the local server**:
-   ```bash
-   node server/index.js
-   ```
-3. **Open [http://localhost:8080](http://localhost:8080)** in your browser.
-
-## 🐳 Docker Deployment
-```bash
-docker build -t electroguide .
 docker run -p 8080:8080 electroguide
 ```
 
