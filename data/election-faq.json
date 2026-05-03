@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How do I register to vote?",
+    "answer": "You can register to vote online through the Voter Helpline App or the Election Commission of India (ECI) portal using Form 6."
+  },
+  {
+    "question": "What is an EVM?",
+    "answer": "An Electronic Voting Machine (EVM) is used to cast votes in Indian elections. You press the button next to your chosen candidate's symbol."
+  },
+  {
+    "question": "Do I need an ID to vote?",
+    "answer": "Yes, you need your Voter ID (EPIC) or any of the 12 alternative approved photo identity documents (like Aadhar, PAN Card, Passport) to vote at the polling booth."
+  }
+]

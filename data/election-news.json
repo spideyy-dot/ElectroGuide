@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Voter Registration for 2026 General Elections Opens Nationwide",
+        "summary": "The Election Commission has announced the opening of voter registration for the 2026 general elections. Citizens can register online or at local booths.",
+        "category": "Registration",
+        "date": "2026-04-15",
+        "tags": ["registration", "voter id", "process"]
+    },
+    {
+        "id": 2,
+        "title": "Digital ID Integration for Seamless Voting Experience",
+        "summary": "A new initiative to link digital IDs with voter records has been launched to prevent fraud and speed up the check-in process at polling stations.",
+        "category": "Technology",
+        "date": "2026-04-20",
+        "tags": ["digital id", "technology", "security"]
+    },
+    {
+        "id": 3,
+        "title": "New Polling Booths Announced in Rural Districts",
+        "summary": "Over 5,000 new polling booths will be established in remote areas to ensure accessibility for all voters in the upcoming 2026 elections.",
+        "category": "Infrastructure",
+        "date": "2026-04-22",
+        "tags": ["polling booth", "accessibility", "rural"]
+    },
+    {
+        "id": 4,
+        "title": "Youth Participation Reaches Record High in Early Surveys",
+        "summary": "Early interest surveys indicate that youth participation in the 2026 election cycle is expected to surpass all previous records.",
+        "category": "Statistics",
+        "date": "2026-04-25",
+        "tags": ["youth", "voter turnout", "survey"]
+    },
+    {
+        "id": 5,
+        "title": "Candidate Nomination Period Set for June 2026",
+        "summary": "The period for filing candidate nominations has been officially scheduled for June 1st to June 15th, 2026.",
+        "category": "Timeline",
+        "date": "2026-05-01",
+        "tags": ["candidates", "nomination", "timeline"]
+    }
+]

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroGuide - Civic Clarity</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="/">
+                <span class="brand-mark">E</span>
+                <span class="brand-name">ElectroGuide</span>
+            </a>
+            <div class="topbar-actions">
+                <span class="jurisdiction-badge">🇮🇳 India 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-item active" data-target="view-chat">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Chat Assistant
+                </a>
+                <a href="#" class="nav-item" data-target="view-timeline">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Election Timeline
+                </a>
+                <a href="#" class="nav-item" data-target="view-quizzes">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    Civic Quizzes
+                </a>
+                <a href="#" class="nav-item" data-target="view-faq">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    FAQ
+                </a>
+            </nav>
+
+            <section class="resources-section" style="margin-top: auto; padding-top: var(--space-8);">
+                <p class="overline">Resources</p>
+                <h2 class="section-heading" style="font-size: var(--text-lg)">Useful Links</h2>
+                <ul class="resources-list">
+                    <li><a href="https://voters.eci.gov.in/" target="_blank" rel="noopener noreferrer">Voter Service Portal</a></li>
+                    <li><a href="https://electoralsearch.eci.gov.in/" target="_blank" rel="noopener noreferrer">Search Name in Voter List</a></li>
+                    <li><a href="https://kyc.eci.gov.in/" target="_blank" rel="noopener noreferrer">Know Your Candidate</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <!-- CHAT VIEW -->
+            <div id="view-chat" class="view-section active">
+                <div class="chat-header sr-only">
+                    <h2>Chat with Electra</h2>
+                    <p>Your friendly civic guide</p>
+                </div>
+                
+                <div class="chat-window" id="chat-window" aria-live="polite">
+                    <div class="message model">
+                        <div class="electra-avatar">E</div>
+                        <div class="bubble-ai">
+                            Hi! I'm Electra. I can help you find election news and answers to common questions.
+                            <br><br>
+                            Try asking about <b>'registration'</b>, <b>'polling booths'</b>, or <b>'latest news'</b>!
+                        </div>
+                    </div>
+                </div>
+
+                <form id="chat-form" class="chat-input-bar">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Ask about voting, registration, etc..." autocomplete="off" required aria-label="Chat input">
+                    <button type="submit" class="chat-send-btn" aria-label="Send message">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- TIMELINE VIEW -->
+            <div id="view-timeline" class="view-section">
+                <p class="overline">Timeline</p>
+                <h2 class="section-heading">Key Election Dates</h2>
+                <div class="timeline-track" id="timeline">
+                    <!-- Timeline steps generated by JS -->
+                </div>
+            </div>
+
+            <!-- QUIZZES VIEW -->
+            <div id="view-quizzes" class="view-section">
+                <p class="overline">Knowledge Test</p>
+                <h2 class="section-heading">Civic Quiz: Election Readiness</h2>
+                
+                <div id="quiz-start-screen" class="quiz-panel">
+                    <h3>Test your knowledge about the Indian electoral process.</h3>
+                    <p style="margin-bottom: var(--space-6); color: var(--color-text-body)">This quiz consists of 3 questions. Are you ready?</p>
+                    <button id="start-quiz-btn" class="btn-primary">Start Quiz</button>
+                </div>
+
+                <div id="quiz-container" class="quiz-panel" style="display: none;">
+                    <div class="quiz-progress">Question <span id="quiz-current-num">1</span> of <span id="quiz-total-num">3</span></div>
+                    <p id="quiz-question" class="quiz-question">Loading quiz...</p>
+                    <div id="quiz-options" class="quiz-options"></div>
+                    <p id="quiz-feedback" class="quiz-feedback"></p>
+                    <button id="next-quiz-btn" class="btn-primary" style="display: none; margin-top: var(--space-4);">Next Question</button>
+                </div>
+
+                <div id="quiz-result-screen" class="quiz-panel" style="display: none;">
+                    <h3>Quiz Completed!</h3>
+                    <p style="font-size: var(--text-xl); font-family: 'DM Serif Display', serif; margin: var(--space-4) 0;">You scored <span id="quiz-score"></span> out of <span id="quiz-max-score"></span>.</p>
+                    <button id="restart-quiz-btn" class="btn-secondary">Retake Quiz</button>
+                </div>
+            </div>
+
+            <!-- FAQ VIEW -->
+            <div id="view-faq" class="view-section">
+                <p class="overline">Help Center</p>
+                <h2 class="section-heading">Frequently Asked Questions</h2>
+                <div class="faq-list" id="faq-list">
+                    <!-- FAQs generated by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
